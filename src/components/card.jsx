@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import pokeball from "./pokemon-4657023_960_720.png";
 export const Card = ({ name, url }) => {
   async function getData(url) {
     if (url) {
@@ -7,7 +7,6 @@ export const Card = ({ name, url }) => {
       const jsonData = await data.json();
       setAbilities(jsonData.abilities)
       setHeight(jsonData.height)
-      setSpecies(jsonData.species.name)
       setImage(jsonData.sprites.other.dream_world.front_default)
       setTypes(jsonData.types)
       setWeight(jsonData.weight)
@@ -20,15 +19,17 @@ export const Card = ({ name, url }) => {
   const [weight, setWeight] = useState(0)
   const [height, setHeight] = useState(0)
   const [types, setTypes] = useState([])
-  const [species, setSpecies] = useState("")
   const [image, setImage] = useState("")
   useEffect(() => {
     getData(url);
-  }, []);
+  }, [url]);
   return (
-    <button className="items-center bg-red-100 p-3 focus:outline-none focus:ring-4 focus:ring-red-500 m-4 rounded-lg">
-      <h1 className=" capitalize ">{name}</h1>
-      <img className="h-24" src={image} alt=""/>
+    <button className="items-center bg-red-100 p-1  m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110">
+      <h1 className=" capitalize p-1 text-xl truncate font-bold text-red-900 ">
+        <img src={pokeball} className="h-5 inline mr-2" alt="" />
+        {name}
+      </h1>
+      <img className="h-24 float-left" src={image} alt="" />
     </button>
   );
 };

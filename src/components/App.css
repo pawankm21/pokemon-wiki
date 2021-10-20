@@ -4,3 +4,6 @@
   background-attachment: fixed;
   background-position: center;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+}
