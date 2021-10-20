@@ -14,12 +14,13 @@ function App() {
       .then((response) => response.json())
       .then((allpokemon) => {
         setResult(allpokemon.results);
-        console.log(allpokemon.results);
+      
         setLoading(false);
       });
   }, [limit, offset]);
   return (
     <div className="App  ">
+      <button onClick={()=>{setLimit(limit+1)}}/>
       <div className="flex flex-col h-100 my-auto items-center">
         <a
           className="block self-center
@@ -68,7 +69,6 @@ function App() {
           <></>
         ) : (
           result.map((pokemon, idx) => {
-            console.log(pokemon);
             return <Card key={idx} name={pokemon.name} url={pokemon.url} />;
           })
         )}

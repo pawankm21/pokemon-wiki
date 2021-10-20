@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const Search = (props) => {
-  const [val, setVal] = useState();
+  // const [val, setVal] = useState();
   return (
     <div class="p-8  w-full flex justify-center">
       <div class="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg  w-1/2 bg-white">

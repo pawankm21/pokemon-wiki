@@ -1,18 +1,28 @@
 import React from "react";
 
-export default function Modal({showModal,setShowModal,name,abilities,forms,weight,height,image,types}) {
-  
+export default function Modal({
+  showModal,
+  setShowModal,
+  name,
+  abilities,
+  forms,
+  weight,
+  height,
+  image,
+  types,
+  moves
+}) {
   return (
     <>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+          <div className="justify-center items-center  overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-xl ">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                  <h3 className=" capitalize text-3xl font-semibold">{name}</h3>
+                <div className="capitalize flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                  <h3 className="  text-3xl font-semibold">{name}</h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -23,12 +33,62 @@ export default function Modal({showModal,setShowModal,name,abilities,forms,weigh
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <img className="float-right h-1/3" src={image} alt=""/>
-                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, repellendus consectetur voluptatum vel ex necessitatibus ab sunt dolore dolor? Commodi eum blanditiis repudiandae, doloribus quidem voluptatem voluptatum perferendis dicta repellendus?
-                  </p>
+                <div className="capitalize relative p-6 flex-auto">
+                  <img className="float-right h-48 " src={image} alt="" />
+                  <section className=" my-4 text-gray-900 text-lg font-bold leading-relaxed">
+                    <p className="mr-5">
+                      Weight:{" "}
+                      <span className="font-normal text-xl text-gray-700">
+                        {weight}
+                      </span>
+                    </p>
+                    <p>
+                      Height:{" "}
+                      <span className="font-normal text-xl text-gray-700">
+                        {height}
+                      </span>
+                    </p>
+                    <h1>Abilities</h1>
 
+                    {abilities.map((ob, idx) => {
+                      return (
+                        <li
+                          className="font-normal text-base text-gray-700"
+                          key={idx}
+                        >
+                          {ob.ability.name}
+                        </li>
+                      );
+                    })}
+
+                    <h1>Form(s)</h1>
+                    {forms.map((ob, idx) => {
+                      return (
+                        <li
+                          className="font-normal text-base text-gray-700"
+                          key={idx}
+                        >
+                          {ob.name}
+                        </li>
+                      );
+                    })}
+                    <h1>Type(s)</h1>
+                    {types.map((ob, idx) => {
+                      return (
+                        <li
+                          className="font-normal text-base text-gray-700"
+                          key={idx}
+                        >
+                          {ob.type.name}
+                        </li>
+                      );
+                    })}
+                    <h1>Moves</h1>
+                    <p className="font-normal text-base text-gray-700 ">
+                    {moves.map((m, idx)=>{
+                      return <span>{m.move.name}, </span>
+                    })}.</p>
+                  </section>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
