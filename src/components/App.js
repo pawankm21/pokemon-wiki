@@ -1,6 +1,6 @@
 import { Card } from "./card";
 import { Search } from "./search";
-import { Modal } from "./modal";
+// import { Modal } from "./modal";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -73,7 +73,7 @@ function App() {
           })
         )}
       </div>
-      <div className=" flex justify-center mb-10">
+      <div className=" text-white flex justify-center mb-10">
         <button
           onClick={() => {
             setOffset(Math.max(0, offset - limit));
