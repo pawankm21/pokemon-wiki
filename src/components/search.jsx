@@ -4,9 +4,9 @@ export const Search = (props) => {
   const [val, setVal] = useState();
   return (
     <div class="p-8  w-full flex justify-center">
-      <div class="flex  rounded-full shadow-2xl transition duration-500 ease-in-out hover:shadow-lg  w-1/2 bg-white">
+      <div class="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg  w-1/2 bg-white">
         <input
-          class="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none"
+          class="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition duration-500 ease-in-out"
           id="search"
           type="text"
           placeholder="Search"

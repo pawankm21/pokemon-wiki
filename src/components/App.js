@@ -1,10 +1,24 @@
 import { Card } from "./card";
 import { Search } from "./search";
 import { Modal } from "./modal";
-import './App.css'
+import "./App.css";
+import { useEffect, useState } from "react";
+
 function App() {
+  const [result, setResult] = useState();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
+      .then((response) => response.json())
+      .then((allpokemon) => {
+        setResult(allpokemon.results);
+        console.log(allpokemon.results);
+        setLoading(false);
+      });
+  }, []);
   return (
-    <div className="App flex flex-col h-screen my-auto items-center ">
+    <div className="App  ">
+      <div className="flex flex-col h-100 my-auto items-center">
       <a
         className="block self-center
         pointer-events-none
@@ -44,9 +58,19 @@ function App() {
           alt=""
         />
       </div>
-      <Search />
-      <Card />
-      <Modal />
+        <Search />
+      </div>
+      <div className="grid grid-cols-3 m-12 items-center">
+        {loading ? (
+          <></>
+        ) : (
+          result.map((pokemon, idx) => {
+            console.log(pokemon);
+            return <Card key={idx} name={pokemon.name} url={pokemon.url} />;
+          })
+        )}
+      </div>
+      {/* <Modal /> */}
     </div>
   );
 }
