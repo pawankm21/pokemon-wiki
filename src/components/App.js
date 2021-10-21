@@ -105,7 +105,7 @@ function App() {
         </button>
         <button
           onClick={() => {
-            setOffset(offset + limit);
+            setOffset(Math.min(74, offset + limit));
           }}
           className=" shadow-xl rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 ml-5 pl-4 pr-5 p-2"
         >
