@@ -13,9 +13,9 @@ export default function Card({ name, url }) {
         onClick={() => {
           setShow(true);
         }}
-        className="items-center bg-red-100 p-1 m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110"
+        className="items-center bg-red-100 p-1 m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110 dark:bg-red-900  "
       >
-        <h1 className=" capitalize lg:p-1 sm:text-xs lg:text-xl truncate font-bold text-red-900  ">
+        <h1 className="dark:text-gray-100 capitalize lg:p-1 sm:text-xs lg:text-xl truncate font-bold text-red-900  ">
           <img src={pokeball} className="h-5 inline mr-2" alt="" />
           {name}
         </h1>

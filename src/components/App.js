@@ -2,8 +2,10 @@ import Card from "./card";
 import Search from "./search";
 import "./App.css";
 import { useEffect, useState } from "react";
-
+import useDarkMode from "../useDark";
+import MyToggle from "./toggle";
 function App() {
+  const [dark, setDark] = useDarkMode();
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(true);
   const [offset, setOffset] = useState(0);
@@ -18,7 +20,7 @@ function App() {
       });
   }, [limit, offset]);
   return (
-    <div className="App  ">
+    <div className={"dark:bg-gray-900 dark:text-gray-100"}>
       <div className=" text-white flex justify-center mb-10">
         {" "}
         <button
@@ -80,6 +82,8 @@ function App() {
             />
           </a>
         </div>
+        <div className="mt-10 mb-3"><MyToggle dark={dark} setDark={setDark}/></div>
+        <p >Switch to your preferred theme.</p>
         <Search />
       </div>
       <div className="grid lg:grid-cols-3 m-12 xl:grid-cols-4 md:grid-cols-2 content-center ">
@@ -112,10 +116,10 @@ function App() {
           next
         </button>
       </div>
-      <footer className="  w-full h-48 bg-red-400 text-white text-center p-4 overflow-hidden">
+      <footer className="  w-full h-48 dark:bg-black bg-red-900 text-white text-center p-4 overflow-hidden">
         <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 ">
           Crafted with passion <span className=" animate-ping  ">{"❤️"}</span>
-          <a href="https://github.com/pawankm21" className="text-red-900 ">
+          <a href="https://github.com/pawankm21" className="text-red-100 font-bold dark:text-red-300">
             @pawankm21
           </a>
         </h1>

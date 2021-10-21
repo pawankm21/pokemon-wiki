@@ -41,10 +41,10 @@ export default function Search(props) {
       ) : (
         <></>
       )}
-      <div className="p-8  w-full flex justify-center">
-        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg lg:text-base text-sm sm:w-full lg:w-1/2 bg-white">
+      <div className="p-8  w-full flex justify-center ">
+        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg lg:text-base text-sm sm:w-full lg:w-1/2 bg-white dark:bg-gray-800 dark:border-black">
           <input
-            className="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition duration-500 ease-in-out   "
+            className="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition dark:bg-gray-800 dark:border-black duration-500 ease-in-out   "
             id="search"
             type="text"
             placeholder="Search your favourite pokemon ...."
@@ -53,14 +53,14 @@ export default function Search(props) {
               setVal(e.target.value.toLowerCase());
             }}
           />
-          <div className="p-4">
+          <div className="p-4 ">
             <button
               onClick={(e) => {
                 e.preventDefault();
                 setUrlName(val);
                 setShow(true);
               }}
-              className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center"
+              className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
