@@ -19,6 +19,7 @@ const useData = (url) => {
             setForms(jsonData.forms);
             setMoves(jsonData.moves);
             setName(jsonData.name);
+            setError(undefined);
         }
       
       }
@@ -67,6 +68,7 @@ const useData = (url) => {
     setShow: setShow,
     setForms: setForms,
     setName: setName,
+    setError: setError,
   };
   return [ret, setRet];
 };

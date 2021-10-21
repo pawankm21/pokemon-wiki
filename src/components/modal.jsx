@@ -12,6 +12,7 @@ export default function Modal({
   types,
   moves,
   error,
+  setError,
 }) {
   return (
     <>
@@ -106,7 +107,10 @@ export default function Modal({
                   <button
                     className="bg-emerald-500 text-red-600 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      setError(undefined);
+                    }}
                   >
                     Close
                   </button>

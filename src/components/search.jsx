@@ -7,8 +7,8 @@ export default function Search(props) {
   const [val, setVal] = useState("1");
   const [show, setShow] = useState(false);
   const [
-    { abilities, weight, height, types, image, moves, forms, name,error },
-    ,
+    { abilities, weight, height, types, image, moves, forms, name,error,}
+    ,{setError}
   ] = useData(`https://pokeapi.co/api/v2/pokemon/${val}/`);
 
   function submitHandler(e) {
@@ -32,6 +32,7 @@ export default function Search(props) {
           abilities={abilities}
           moves={moves}
           error={error}
+          setError={setError}
         />
       ) : (
         <></>
