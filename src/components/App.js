@@ -1,6 +1,5 @@
-import { Card } from "./card";
-import { Search } from "./search";
-// import { Modal } from "./modal";
+import  Card  from "./card";
+import  Search  from "./search";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -8,7 +7,7 @@ function App() {
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(true);
   const [offset, setOffset] = useState(0);
-  const [limit, setLimit] = useState(9);
+  const [limit, setLimit] = useState(100);
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((response) => response.json())
@@ -20,10 +19,19 @@ function App() {
   }, [limit, offset]);
   return (
     <div className="App  ">
-      <button onClick={()=>{setLimit(limit+1)}}/>
+      <div className=" text-white flex justify-center mb-10">
+        {" "}
+        <button
+          onClick={() => {
+            setLimit(limit + 1);
+          }}
+        ></button>
+      </div>
+
       <div className="flex flex-col h-100 my-auto items-center">
         <a
           className="block self-center
+          w-1/2
         pointer-events-none
         mt-12
         mb-3
@@ -33,12 +41,11 @@ function App() {
           href="https://fontmeme.com/pokemon-font/"
         >
           <img
-            src="https://fontmeme.com/permalink/211020/fbe9d4bd17b45966717fb7a2f6e2e968.png"
+            src="https://fontmeme.com/permalink/211021/74c529ba8b8fbb1b745ad02e1602b5f8.png"
             alt="pokemon-font"
             border="0"
           />
         </a>
-
         <p className=" pl-4 pr-4 pt-6 w-3/4 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
           voluptatibus, nisi, esse qui placeat nobis nihil voluptate veniam a
