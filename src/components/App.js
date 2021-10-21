@@ -112,8 +112,11 @@ function App() {
           next
         </button>
       </div>
-      <footer className="w-full h-48 bg-red-400 text-white" >
-        
+      <footer className="w-full h-48 bg-red-400 text-white text-center p-4">
+        <h1 className=" font-xl mt-10 ">
+          Crafted with passion <span className=" animate-ping duration-700 ">{"💖"}</span>
+          <a href="https://github.com/pawankm21" className="text-red-900 ">@pawankm21</a>
+        </h1>
       </footer>
     </div>
   );
