@@ -7,7 +7,7 @@ function App() {
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(true);
   const [offset, setOffset] = useState(0);
-  const [limit, setLimit] = useState(100);
+  const [limit, setLimit] = useState(9);
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((response) => response.json())
@@ -85,18 +85,18 @@ function App() {
           onClick={() => {
             setOffset(Math.max(0, offset - limit));
           }}
-          className=" rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 mr-5 pl-5 pr-5 p-2"
+          className="shadow-xl  rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 mr-5 pl-5 pr-5 p-2"
         >
           prev
         </button>
-        <button className=" rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-700  p-2 pointer-events-none w-20">
+        <button className="shadow-xl  rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-700  p-2 pointer-events-none w-20">
           {Math.floor(offset / limit)}
         </button>
         <button
           onClick={() => {
             setOffset(offset + limit);
           }}
-          className=" rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 ml-5 pl-4 pr-5 p-2"
+          className=" shadow-xl rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 ml-5 pl-4 pr-5 p-2"
         >
           next
         </button>
