@@ -1,5 +1,5 @@
-import  Card  from "./card";
-import  Search  from "./search";
+import Card from "./card";
+import Search from "./search";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -7,13 +7,13 @@ function App() {
   const [result, setResult] = useState();
   const [loading, setLoading] = useState(true);
   const [offset, setOffset] = useState(0);
-  const [limit, setLimit] = useState(9);
+  const [limit, setLimit] = useState(15);
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((response) => response.json())
       .then((allpokemon) => {
         setResult(allpokemon.results);
-      
+
         setLoading(false);
       });
   }, [limit, offset]);
@@ -29,8 +29,21 @@ function App() {
       </div>
 
       <div className="flex flex-col h-100 my-auto items-center">
+        <div className="grid grid-cols-6  p-2 absolute top-10 z-0">
+          <img
+            className="col-start-1 lg:h-48"
+            src={process.env.PUBLIC_URL + "/images/turtle.png"}
+            alt=""
+          />
+
+          <img
+            className="col-end-7 lg:h-48"
+            src={process.env.PUBLIC_URL + "/images/dragon.png"}
+            alt=""
+          />
+        </div>
         <a
-          className="block self-center
+          className="block self-center z-10
           w-1/2
         pointer-events-none
         mt-12
@@ -46,32 +59,13 @@ function App() {
             border="0"
           />
         </a>
-        <p className=" pl-4 pr-4 pt-6 w-3/4 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          voluptatibus, nisi, esse qui placeat nobis nihil voluptate veniam a
-          consequuntur saepe recusandae, nostrum et vitae blanditiis facere
-          quibusdam corporis obcaecati?
+        <p className=" pl-4 pr-4 pt-6 w-3/4 text-center z-10">
+          A Simple Pokemon Search tool made with ReactJs.
         </p>
-        <div className="grid grid-cols-3 m-3 p-2">
-          <img
-            className="h-24 m-5 "
-            src={process.env.PUBLIC_URL + "/images/turtle.png"}
-            alt=""
-          />
-          <img
-            className="h-24 m-5"
-            src={process.env.PUBLIC_URL + "/images/mouse.png"}
-            alt=""
-          />
-          <img
-            className="h-24 m-5 "
-            src={process.env.PUBLIC_URL + "/images/dragon.png"}
-            alt=""
-          />
-        </div>
+
         <Search />
       </div>
-      <div className="grid grid-cols-3 m-12  content-center ">
+      <div className="grid lg:grid-cols-3 m-12 xl:grid-cols-4 md:grid-cols-2 content-center ">
         {loading ? (
           <></>
         ) : (

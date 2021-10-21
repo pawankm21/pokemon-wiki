@@ -19,7 +19,7 @@ export default function Search(props) {
 
   return (
     <>
-      {show&&name ? (
+      {show ? (
         <Modal
           showModal={show}
           setShowModal={setShow}
@@ -38,7 +38,7 @@ export default function Search(props) {
         <></>
       )}
       <div className="p-8  w-full flex justify-center">
-        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg  w-1/2 bg-white">
+        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg   sm:w-full lg:w-1/2 bg-white">
           <input
             className="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition duration-500 ease-in-out"
             id="search"

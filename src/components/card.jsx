@@ -5,7 +5,7 @@ import useData from "./useData";
 export default function Card({ name, url }) {
   const [
     { abilities, weight, height, types, image, moves, show, forms },
-    { setShow,setError },
+    { setShow,setError},
   ] = useData(url);
   return (
     <>
@@ -13,9 +13,9 @@ export default function Card({ name, url }) {
         onClick={() => {
           setShow(true);
         }}
-        className="items-center bg-red-100 p-1  m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110"
+        className="items-center bg-red-100 p-1 m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110"
       >
-        <h1 className=" capitalize p-1 text-xl truncate font-bold text-red-900 ">
+        <h1 className=" capitalize lg:p-1 sm:text-xs lg:text-xl truncate font-bold text-red-900  ">
           <img src={pokeball} className="h-5 inline mr-2" alt="" />
           {name}
         </h1>
