@@ -112,10 +112,12 @@ function App() {
           next
         </button>
       </div>
-      <footer className="w-full h-48 bg-red-400 text-white text-center p-4">
-        <h1 className=" font-xl mt-10 ">
-          Crafted with passion <span className=" animate-ping duration-700 ">{"💖"}</span>
-          <a href="https://github.com/pawankm21" className="text-red-900 ">@pawankm21</a>
+      <footer className="  w-full h-48 bg-red-400 text-white text-center p-4 overflow-hidden">
+        <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 ">
+          Crafted with passion <span className=" animate-ping  ">{"❤️"}</span>
+          <a href="https://github.com/pawankm21" className="text-red-900 ">
+            @pawankm21
+          </a>
         </h1>
       </footer>
     </div>
