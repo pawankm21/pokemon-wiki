@@ -6,27 +6,22 @@ const useData = (url) => {
       try {
         const data = await fetch(url);
         const jsonData = await data.json();
-        if (jsonData) {
-          setError(undefined);
-          setAbilities(jsonData.abilities);
-          setHeight(jsonData.height);
-          setImage(
-            jsonData.sprites.other.dream_world.front_default !== null
-              ? jsonData.sprites.other.dream_world.front_default
-              : jsonData.sprites.front_default !== null
-              ? jsonData.sprites.front_default
-              : jsonData.sprites.other["official-artwork"].front_default
-          );
-          setTypes(jsonData.types);
-          setWeight(jsonData.weight);
-          setForms(jsonData.forms);
-          setMoves(jsonData.moves);
-          setName(jsonData.name);
-        }
-        else {
-               setError("Sorry! could not find the pokemon 😢");
-        }
-        
+
+        setError(undefined);
+        setAbilities(jsonData.abilities);
+        setHeight(jsonData.height);
+        setImage(
+          jsonData.sprites.other.dream_world.front_default !== null
+            ? jsonData.sprites.other.dream_world.front_default
+            : jsonData.sprites.front_default !== null
+            ? jsonData.sprites.front_default
+            : jsonData.sprites.other["official-artwork"].front_default
+        );
+        setTypes(jsonData.types);
+        setWeight(jsonData.weight);
+        setForms(jsonData.forms);
+        setMoves(jsonData.moves);
+        setName(jsonData.name);
       } catch (e) {
         setError("Sorry! could not find the pokemon 😢");
       }

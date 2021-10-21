@@ -112,6 +112,9 @@ function App() {
           next
         </button>
       </div>
+      <footer className="w-full h-48 bg-red-400 text-white" >
+        
+      </footer>
     </div>
   );
 }

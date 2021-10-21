@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import useData from "./useData";
 import Modal from "./modal";
 
-
 export default function Search(props) {
   const [val, setVal] = useState("1");
-  const [show, setShow] = useState(false);
   const [
-    { abilities, weight, height, types, image, moves, forms, name,error,}
-    ,{setError}
+    {
+      abilities,
+      weight,
+      height,
+      types,
+      image,
+      moves,
+      forms,
+      name,
+      error,
+      show,
+    },
+    { setError, setShow },
   ] = useData(`https://pokeapi.co/api/v2/pokemon/${val}/`);
 
   function submitHandler(e) {
@@ -19,7 +28,7 @@ export default function Search(props) {
 
   return (
     <>
-      {show&&name? (
+      {show && name ? (
         <Modal
           showModal={show}
           setShowModal={setShow}

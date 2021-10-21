@@ -93,7 +93,7 @@ export default function Modal({
                           );
                         })}
                         <h1>Moves</h1>
-                        <p className="font-normal text-base text-gray-700 ">
+                        <p className="font-normal  text-sm text-gray-700 ">
                           {moves.map((m, idx) => {
                             return <span key={idx}>{m.move.name}, </span>;
                           })}
