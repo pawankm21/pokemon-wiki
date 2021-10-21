@@ -19,7 +19,7 @@ export default function Search(props) {
 
   return (
     <>
-      {show ? (
+      {show&&name? (
         <Modal
           showModal={show}
           setShowModal={setShow}
@@ -51,9 +51,8 @@ export default function Search(props) {
           />
           <div className="p-4">
             <button
-              
               onClick={submitHandler}
-              className="bg-black text-white rounded-full p-2 hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center"
+              className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
