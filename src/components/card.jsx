@@ -5,7 +5,7 @@ import useData from "./useData";
 export default function Card({ name, url }) {
   const [
     { abilities, weight, height, types, image, moves, show, forms },
-    { setShow },
+    { setShow,setError },
   ] = useData(url);
   return (
     <>
@@ -32,6 +32,7 @@ export default function Card({ name, url }) {
         image={image}
         abilities={abilities}
         moves={moves}
+        setError={setError}
       />
     </>
   );
