@@ -23,6 +23,10 @@ const useData = (url) => {
           setMoves(jsonData.moves);
           setName(jsonData.name);
         }
+        else {
+               setError("Sorry! could not find the pokemon 😢");
+        }
+        
       } catch (e) {
         setError("Sorry! could not find the pokemon 😢");
       }
