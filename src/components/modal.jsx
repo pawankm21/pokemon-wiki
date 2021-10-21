@@ -16,15 +16,15 @@ export default function Modal({
 }) {
   return (
     <>
-      {showModal&&name ? (
+      {showModal && name ? (
         <>
-          <div className="justify-center items-center  overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="justify-center items-center  overflow-x-hidden  overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto lg:max-w-xl ">
               {/*content*/}
 
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none  dark:bg-red-900">
                 {/*header*/}
-                <div className="capitalize flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                <div className="capitalize flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t ">
                   <h3 className="  lg:text-3xl font-semibold">
                     {error ? "Not Found 😢" : name}
                   </h3>
@@ -44,16 +44,16 @@ export default function Modal({
                   ) : (
                     <>
                       <img className="float-right h-48 " src={image} alt="" />
-                      <section className=" my-4 text-gray-900 text-lg font-bold leading-relaxed">
-                        <p className="mr-5">
+                      <section className="dark:text-gray-50 my-4 text-gray-900 text-lg font-bold leading-relaxed">
+                        <p className="mr-5 ">
                           Weight:{" "}
-                          <span className="font-normal text-xl text-gray-700">
+                          <span className="font-normal text-xl text-gray-700 dark:text-gray-300">
                             {weight}
                           </span>
                         </p>
                         <p>
                           Height:{" "}
-                          <span className="font-normal text-xl text-gray-700">
+                          <span className="font-normal text-xl text-gray-700 dark:text-gray-300">
                             {height}
                           </span>
                         </p>
@@ -62,7 +62,7 @@ export default function Modal({
                         {abilities.map((ob, idx) => {
                           return (
                             <li
-                              className="font-normal text-base text-gray-700"
+                              className="font-normal text-base text-gray-700 dark:text-gray-300"
                               key={idx}
                             >
                               {ob.ability.name}
@@ -74,7 +74,7 @@ export default function Modal({
                         {forms.map((ob, idx) => {
                           return (
                             <li
-                              className="font-normal text-base text-gray-700"
+                              className="font-normal text-base text-gray-700 dark:text-gray-300"
                               key={idx}
                             >
                               {ob.name}
@@ -85,7 +85,7 @@ export default function Modal({
                         {types.map((ob, idx) => {
                           return (
                             <li
-                              className="font-normal text-base text-gray-700"
+                              className="font-normal text-base text-gray-700 dark:text-gray-300"
                               key={idx}
                             >
                               {ob.type.name}
@@ -93,7 +93,7 @@ export default function Modal({
                           );
                         })}
                         <h1>Moves</h1>
-                        <p className="font-normal  text-sm text-gray-700 ">
+                        <p className="font-normal  text-sm text-gray-700 dark:text-gray-300">
                           {moves.map((m, idx) => {
                             return <span key={idx}>{m.move.name}, </span>;
                           })}
@@ -106,7 +106,7 @@ export default function Modal({
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                   <button
-                    className="bg-emerald-500 text-red-600 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-emerald-500 text-red-600 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 dark:bg-black"
                     type="button"
                     onClick={() => {
                       setError(undefined);
