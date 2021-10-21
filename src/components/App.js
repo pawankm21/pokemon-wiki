@@ -62,7 +62,24 @@ function App() {
         <p className=" pl-4 pr-4 pt-6 w-3/4 text-center z-10">
           A Simple Pokemon Search tool made with ReactJs.
         </p>
-
+        <div className=" grid grid-cols-2 gap-4 mt-5">
+          <a href="https://github.com/pawankm21/pokemon-wiki">
+            {" "}
+            <img
+              className="h-8"
+              alt="GitHub Org's stars"
+              src="https://img.shields.io/github/stars/pawankm21/pokemon-wiki?style=social"
+            />
+          </a>
+          <a href="https://github.com/pawankm21/pokemon-wiki">
+            {" "}
+            <img
+              className="h-8"
+              alt="GitHub forks"
+              src="https://img.shields.io/github/forks/pawankm21/pokemon-wiki?style=social"
+            />
+          </a>
+        </div>
         <Search />
       </div>
       <div className="grid lg:grid-cols-3 m-12 xl:grid-cols-4 md:grid-cols-2 content-center ">
