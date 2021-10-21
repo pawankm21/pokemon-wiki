@@ -4,6 +4,7 @@ import Modal from "./modal";
 
 export default function Search(props) {
   const [val, setVal] = useState("1");
+  const [urlName, setUrlName] = useState();
   const [
     {
       abilities,
@@ -18,13 +19,7 @@ export default function Search(props) {
       show,
     },
     { setError, setShow },
-  ] = useData(`https://pokeapi.co/api/v2/pokemon/${val}/`);
-
-  function submitHandler(e) {
-    e.preventDefault();
-    setVal(val.toLowerCase());
-    setShow(true);
-  }
+  ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
 
   return (
     <>
@@ -55,12 +50,16 @@ export default function Search(props) {
             placeholder="Search"
             name="search"
             onChange={(e) => {
-              setVal(e.target.value);
+              setVal(e.target.value.toLowerCase());
             }}
           />
           <div className="p-4">
             <button
-              onClick={submitHandler}
+              onClick={(e) => {
+                e.preventDefault();
+                setUrlName(val);
+                setShow(true);
+              }}
               className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center"
             >
               <svg
