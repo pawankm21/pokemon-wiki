@@ -42,12 +42,12 @@ export default function Search(props) {
         <></>
       )}
       <div className="p-8  w-full flex justify-center">
-        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg   sm:w-full lg:w-1/2 bg-white">
+        <div className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg lg:text-base text-sm sm:w-full lg:w-1/2 bg-white">
           <input
-            className="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition duration-500 ease-in-out"
+            className="rounded-l-full w-full py-4 px-6 text-gray-900 leading-tight focus:outline-none focus:ring-red-400 focus:ring-4 transition duration-500 ease-in-out   "
             id="search"
             type="text"
-            placeholder="Search"
+            placeholder="Search your favourite pokemon ...."
             name="search"
             onChange={(e) => {
               setVal(e.target.value.toLowerCase());
