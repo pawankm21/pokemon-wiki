@@ -100,7 +100,7 @@ function App() {
           onClick={() => {
             setOffset(Math.max(0, offset - limit));
           }}
-          className="shadow-xl  rozd-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 mr-5 pl-5 pr-5 p-2"
+          className="shadow-xl  rounded-lg focus:ring-4 focus:ring-red-300 focus:outline-none bg-red-500 mr-5 pl-5 pr-5 p-2"
         >
           prev
         </button>
