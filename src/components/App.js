@@ -21,14 +21,7 @@ function App() {
   }, [limit, offset]);
   return (
     <div className={"dark:bg-gray-900 dark:text-gray-100"}>
-      <div className=" text-white flex justify-center mb-10">
-        {" "}
-        <button
-          onClick={() => {
-            setLimit(limit + 1);
-          }}
-        ></button>
-      </div>
+      <div className=" text-white flex justify-center mb-10"> </div>
 
       <div className="flex flex-col h-100 my-auto items-center">
         <div className="grid grid-cols-6  p-2 absolute top-10 z-0">
@@ -82,9 +75,25 @@ function App() {
             />
           </a>
         </div>
-        <div className="mt-10 mb-3"><MyToggle dark={dark} setDark={setDark}/></div>
-        <p >Switch to your preferred theme.</p>
+        <div className="mt-10 mb-3">
+          <MyToggle dark={dark} setDark={setDark} />
+        </div>
+        <p>Switch to your preferred theme.</p>
         <Search />
+        <div>
+          <label for="limit">Pokemons per page :</label>
+          <select name="limit" id="limit" className="focus:ring-4 ml-3 ring-red-400 outline-none p-1 rounded-xl bg-red-500 text-white option:hover:bg-white" onChange={(e) => {
+            setLimit(Number(e.target.value));
+          }} >
+            <option value={15}>15</option>
+            <option  value={30}>30</option>
+            <option value={60}>60</option>
+            <option value={90}>90</option>
+            <option value={120}>120</option>
+     
+          </select>
+
+        </div>
       </div>
       <div className="grid lg:grid-cols-3 m-12 xl:grid-cols-4 md:grid-cols-2 content-center ">
         {loading ? (
@@ -119,7 +128,10 @@ function App() {
       <footer className="  w-full h-48 dark:bg-black bg-red-900 text-white text-center p-4 overflow-hidden">
         <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 ">
           Crafted with passion <span className=" animate-ping  ">{"❤️"}</span>
-          <a href="https://github.com/pawankm21" className="text-red-100 font-bold dark:text-red-300">
+          <a
+            href="https://github.com/pawankm21"
+            className="text-red-100 font-bold dark:text-red-300"
+          >
             @pawankm21
           </a>
         </h1>
