@@ -5,6 +5,7 @@ import Modal from "./modal";
 export default function Search(props) {
   const [val, setVal] = useState("1");
   const [urlName, setUrlName] = useState();
+  const [show, setShow] = useState(false);
   const [
     {
       abilities,
@@ -16,14 +17,14 @@ export default function Search(props) {
       forms,
       name,
       error,
-      show,
+    
     },
-    { setError, setShow },
+    { setError },
   ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
 
   return (
     <>
-      {show && name ? (
+      {show  ? (
         <Modal
           showModal={show}
           setShowModal={setShow}

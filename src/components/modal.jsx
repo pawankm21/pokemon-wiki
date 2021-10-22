@@ -16,7 +16,7 @@ export default function Modal({
 }) {
   return (
     <>
-      {showModal && name ? (
+      {showModal && error !== undefined ? (
         <>
           <div className="justify-center items-center  overflow-x-hidden  overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto lg:max-w-xl ">

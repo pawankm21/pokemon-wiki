@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 
 const useData = (url) => {
   async function getData(url) {
+       setError(undefined);
     if (url) {
       try {
         const data = await fetch(url);
         const jsonData = await data.json();
-
-        setError(undefined);
+        setError(null);
         setAbilities(jsonData.abilities);
         setHeight(jsonData.height);
         setImage(
@@ -34,7 +34,6 @@ const useData = (url) => {
   const [types, setTypes] = useState([]);
   const [image, setImage] = useState("");
   const [moves, setMoves] = useState("");
-  const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [error, setError] = useState(undefined);
   useEffect(() => {
@@ -47,7 +46,6 @@ const useData = (url) => {
     types: types,
     image: image,
     moves: moves,
-    show: show,
     forms: forms,
     name: name,
     error: error,
@@ -59,7 +57,6 @@ const useData = (url) => {
     setTypes: setTypes,
     setImage: setImage,
     setMoves: setMoves,
-    setShow: setShow,
     setForms: setForms,
     setName: setName,
     setError: setError,
