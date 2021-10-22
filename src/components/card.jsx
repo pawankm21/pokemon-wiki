@@ -1,21 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import pokeball from "./pokemon-4657023_960_720.png";
 import Modal from "./modal";
 import useData from "./useData";
 export default function Card({ name, url }) {
   const [
-    { abilities, weight, height, types, image, moves, forms, error },
-    { setError},
+    { abilities, weight, height, types, image, moves, show, forms },
+    { setShow,setError},
   ] = useData(url);
-  const [show, setShow] = useState(false);
   return (
     <>
       <button
         onClick={() => {
-          if (error !== undefined) {
-            setShow(true);
-          }
-
+          setShow(true);
         }}
         className="items-center bg-red-100 p-1 m-3 rounded-lg shadow-md transition duration-500 ease-in-out transform hover:scale-110 dark:bg-red-900  "
       >
