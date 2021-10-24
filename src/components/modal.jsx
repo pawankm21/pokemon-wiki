@@ -127,12 +127,13 @@ export default function Modal({
                             })}
                           </div>
                         </div>
-                        <h1 className="text-center">Moves</h1>
-                        <div className="grid grid-cols-3 p-2 bg-red-900 m-0 rounded-lg">
+                        <h1 className="text-center text-2xl m-2">Moves</h1>
+                          <div className="grid lg:grid-cols-3 p-2 bg-red-900 m-0
+                        dark:bg-gray-900 sm:grid-cols-2 rounded-lg ">
                           {moves.map((m, idx) => {
                             return (
                               <li
-                                className=" font-normal text-sm
+                                className=" font-normal lg:text-sm text-xs
                                text-white  dark:text-gray-300"
                                 key={idx}
                               >
@@ -148,7 +149,7 @@ export default function Modal({
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                   <button
-                    className="bg-emerald-500 text-red-600 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 dark:bg-black"
+                    className="bg-emerald-500 text-red-600 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 dark:bg-gray-900"
                     type="button"
                     onClick={() => {
                       setError(undefined);
@@ -161,7 +162,7 @@ export default function Modal({
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-gray-900"></div>
         </>
       ) : null}
     </>
