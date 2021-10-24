@@ -1,21 +1,39 @@
 {
   "files": {
-    "main.css": "/pokemon-wiki/static/css/main.9676c616.chunk.css",
-    "main.js": "/pokemon-wiki/static/js/main.569263e4.chunk.js",
-    "main.js.map": "/pokemon-wiki/static/js/main.569263e4.chunk.js.map",
+    "main.css": "/pokemon-wiki/static/css/main.53aca761.chunk.css",
+    "main.js": "/pokemon-wiki/static/js/main.88a0ca66.chunk.js",
+    "main.js.map": "/pokemon-wiki/static/js/main.88a0ca66.chunk.js.map",
     "runtime-main.js": "/pokemon-wiki/static/js/runtime-main.1b443291.js",
     "runtime-main.js.map": "/pokemon-wiki/static/js/runtime-main.1b443291.js.map",
-    "static/js/2.e1304fd3.chunk.js": "/pokemon-wiki/static/js/2.e1304fd3.chunk.js",
-    "static/js/2.e1304fd3.chunk.js.map": "/pokemon-wiki/static/js/2.e1304fd3.chunk.js.map",
+    "static/js/2.e1c11b71.chunk.js": "/pokemon-wiki/static/js/2.e1c11b71.chunk.js",
+    "static/js/2.e1c11b71.chunk.js.map": "/pokemon-wiki/static/js/2.e1c11b71.chunk.js.map",
     "index.html": "/pokemon-wiki/index.html",
-    "static/css/main.9676c616.chunk.css.map": "/pokemon-wiki/static/css/main.9676c616.chunk.css.map",
-    "static/js/2.e1304fd3.chunk.js.LICENSE.txt": "/pokemon-wiki/static/js/2.e1304fd3.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/pokemon-wiki/static/media/pokemon-4657023_960_720.e97a3d90.png"
+    "static/css/main.53aca761.chunk.css.map": "/pokemon-wiki/static/css/main.53aca761.chunk.css.map",
+    "static/js/2.e1c11b71.chunk.js.LICENSE.txt": "/pokemon-wiki/static/js/2.e1c11b71.chunk.js.LICENSE.txt",
+    "static/media/bug.svg": "/pokemon-wiki/static/media/bug.1a2fadc2.svg",
+    "static/media/dark.svg": "/pokemon-wiki/static/media/dark.27fdc7ed.svg",
+    "static/media/dragon.svg": "/pokemon-wiki/static/media/dragon.9d32757b.svg",
+    "static/media/electric.svg": "/pokemon-wiki/static/media/electric.83cbb841.svg",
+    "static/media/fairy.svg": "/pokemon-wiki/static/media/fairy.767c2f56.svg",
+    "static/media/fighting.svg": "/pokemon-wiki/static/media/fighting.f20d1bd2.svg",
+    "static/media/fire.svg": "/pokemon-wiki/static/media/fire.e0bd7fca.svg",
+    "static/media/flying.svg": "/pokemon-wiki/static/media/flying.d1778503.svg",
+    "static/media/ghost.svg": "/pokemon-wiki/static/media/ghost.ddf26831.svg",
+    "static/media/grass.svg": "/pokemon-wiki/static/media/grass.e09623e3.svg",
+    "static/media/ground.svg": "/pokemon-wiki/static/media/ground.e567f4fc.svg",
+    "static/media/ice.svg": "/pokemon-wiki/static/media/ice.cd2f9043.svg",
+    "static/media/normal.svg": "/pokemon-wiki/static/media/normal.2ba66dd5.svg",
+    "static/media/poison.svg": "/pokemon-wiki/static/media/poison.43956925.svg",
+    "static/media/App.css": "/pokemon-wiki/static/media/pokeball.e97a3d90.png",
+    "static/media/psychic.svg": "/pokemon-wiki/static/media/psychic.67439878.svg",
+    "static/media/rock.svg": "/pokemon-wiki/static/media/rock.61a8428d.svg",
+    "static/media/steel.svg": "/pokemon-wiki/static/media/steel.cb91a92a.svg",
+    "static/media/water.svg": "/pokemon-wiki/static/media/water.b6d13329.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b443291.js",
-    "static/js/2.e1304fd3.chunk.js",
-    "static/css/main.9676c616.chunk.css",
-    "static/js/main.569263e4.chunk.js"
+    "static/js/2.e1c11b71.chunk.js",
+    "static/css/main.53aca761.chunk.css",
+    "static/js/main.88a0ca66.chunk.js"
   ]
 }
