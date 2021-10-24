@@ -26,13 +26,13 @@ export default function Modal({
   setError,
 })
 {
-  console.log(images);
+
   return (
     <>
       {showModal && name ? (
         <>
           <div className="justify-center items-center  overflow-x-hidden  overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto lg:max-w-xl ">
+            <div className="relative w-auto my-6 mx-auto lg:max-w-2xl ">
               {/*content*/}
 
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none  dark:bg-red-900">
@@ -57,7 +57,7 @@ export default function Modal({
                   ) : (
                     <>
                       <img
-                        className="justify-self-center h-48 "
+                        className="justify-self-center h-48  mt-4"
                         src={image}
                         alt=""
                       />
