@@ -4,3 +4,22 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+@layer base {
+  h1 {
+    @apply text-red-900 ;
+    @apply dark:text-gray-100;
+  }
+  h2 {
+    @apply text-xl;
+    @apply dark:text-gray-100;
+    @apply text-red-900 ;
+
+
+  }
+  h3{
+    @apply dark:text-gray-100;
+    @apply text-red-900 ;
+
+
+  }
+}

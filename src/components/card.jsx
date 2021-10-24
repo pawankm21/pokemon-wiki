@@ -1,5 +1,5 @@
 import React from "react";
-import pokeball from "./pokemon-4657023_960_720.png";
+import pokeball from "./images/pokeball.png";
 import Modal from "./modal";
 import useData from "./useData";
 export default function Card({ name, url }) {

@@ -1,5 +1,5 @@
 .App{
-      background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)), url(pokemon-4657023_960_720.png)  ;
+      background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)), url(images/pokeball.png)  ;
       background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
