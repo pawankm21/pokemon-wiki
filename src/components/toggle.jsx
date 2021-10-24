@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch } from "@headlessui/react";
-
+import { ReactComponent as Sun } from "./images/icons/fire.svg";
+import {ReactComponent as Moon } from "./images/icons/dark.svg";
 export default function MyToggle({dark,setDark}) {
   
 
@@ -16,11 +17,15 @@ export default function MyToggle({dark,setDark}) {
       <span
         className={`${
           dark ? "translate-x-6" : "translate-x-1"
-        } inline-block w-5 h-5 transform bg-white rounded-full relative justify-center text-xs `}
+        } inline-block w-5 h-5 transform bg-yellow-500 dark:bg-black rounded-full relative justify-center text-xs `}
       >
-        <span className="inline-block align-baseline">
-          {dark ? "🌙" : "☀️"}
-        </span>
+        <div className=" text-yellow-200 text-left  flex">
+          {dark ? (
+            <Moon className="fill-current h-5  m-0 p-0" />
+          ) : (
+            <Sun className="fill-current h-5  m-0 p-0" />
+          )}
+        </div>
       </span>
     </Switch>
   );

@@ -11,7 +11,9 @@ module.exports = {
   },
   important: true,
   variants: {
-    extend: {},
+    extend: {
+      cursor: ["hover", "focus"],
+    },
   },
   plugins: [],
 };

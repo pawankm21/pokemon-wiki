@@ -1,11 +1,11 @@
 import React from "react";
-import pokeball from "./pokemon-4657023_960_720.png";
+import pokeball from "./images/pokeball.png";
 import Modal from "./modal";
 import useData from "./useData";
 export default function Card({ name, url }) {
   const [
     { abilities, weight, height, types, image, moves, show, forms },
-    { setShow,setError},
+    { setShow,setError,},
   ] = useData(url);
   return (
     <>
@@ -33,6 +33,7 @@ export default function Card({ name, url }) {
         abilities={abilities}
         moves={moves}
         setError={setError}
+
       />
     </>
   );
