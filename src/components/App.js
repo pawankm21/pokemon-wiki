@@ -126,7 +126,7 @@ function App() {
         </button>
       </div>
       <footer className="  w-full h-48 dark:bg-black bg-red-900 text-white text-center p-4 overflow-hidden">
-        <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 ">
+        <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 text-white">
           Crafted with passion <span className=" animate-ping  ">{"❤️"}</span>
           <a
             href="https://github.com/pawankm21"
