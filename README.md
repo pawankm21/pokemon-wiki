@@ -1,1 +1,19 @@
-[***Check it out here!***](https://stoic-boyd-da41e3.netlify.app/)
+# Pokemon Wiki
+
+![Check it out here]()
+
+### Find all your favourite Pokemons at one place
+
+# Features
+- Search pokemons
+- Responsive design
+
+# Technologies used 🛠️
+
+- [React](https://reactjs.org/)
+- [Tailwindcss]()
+- [HeadlessUI]()
+
+# screenshots 🍥
+
+- 
