@@ -1,6 +1,6 @@
 # Pokemon Wiki
 
-![Check it out here]()
+![Check it out here](https://pawankm21.github.io/pokemon-wiki/)
 
 ### Find all your favourite Pokemons at one place
 
