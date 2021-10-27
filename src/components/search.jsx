@@ -23,24 +23,22 @@ export default function Search(props) {
 
   return (
     <>
-      {show && name ? (
-        <Modal
-          showModal={show}
-          setShowModal={setShow}
-          weight={weight}
-          height={height}
-          types={types}
-          forms={forms}
-          name={name}
-          image={image}
-          abilities={abilities}
-          moves={moves}
-          error={error}
-          setError={setError}
-        />
-      ) : (
-        <></>
-      )}
+      <Modal
+        showModal={show}
+        setShowModal={setShow}
+        weight={weight}
+        height={height}
+        types={types}
+        forms={forms}
+        name={name}
+        image={image}
+        abilities={abilities}
+        moves={moves}
+        error={error}
+        setError={setError}
+        
+      />
+
       <div className="p-8  w-full flex justify-center ">
         <form className="flex  rounded-full shadow transition duration-500 ease-in-out hover:shadow-lg lg:text-base text-sm sm:w-full lg:w-1/2 bg-white dark:bg-gray-800 dark:border-black">
           <input
@@ -58,7 +56,9 @@ export default function Search(props) {
               onClick={(e) => {
                 e.preventDefault();
                 setUrlName(val);
-                setShow(true);
+                if (val !== "") {
+                  setShow(true);
+                }
               }}
               className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center "
             >

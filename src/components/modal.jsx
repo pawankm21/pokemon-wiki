@@ -24,12 +24,13 @@ export default function Modal({
   moves,
   error,
   setError,
+  fetched,
 })
 {
 
   return (
     <>
-      {showModal && name ? (
+      {showModal? (
         <>
           <div className="justify-center items-center  overflow-x-hidden  overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto lg:max-w-2xl ">
