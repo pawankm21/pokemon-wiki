@@ -81,7 +81,7 @@ function App() {
         <p>Switch to your preferred theme.</p>
         <Search />
         <div>
-          <label for="limit">Pokemons per page :</label>
+          <label htmlFor="limit">Pokemons per page :</label>
           <select name="limit" id="limit" className="focus:ring-4 ml-3 ring-red-400 outline-none p-1 rounded-xl bg-red-500 text-white option:hover:bg-white" onChange={(e) => {
             setLimit(Number(e.target.value));
           }} >
