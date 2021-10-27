@@ -42,18 +42,21 @@ export default function Modal({
                     {error ? "Not Found 😢" : name}
                   </h3>
                   <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    <span className="text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
                     </span>
                   </button>
                 </div>
-                {/*body*/}{" "}
+              
                 <div className="capitalize relative  grid justify-items-stretch">
                   {error ? (
-                    "The Pokemon you are looking for is not available😓"
+                    <span className="p-4 text-center">
+                      {" "}
+                      The Pokemon you are looking for is not available😓
+                    </span>
                   ) : (
                     <>
                       <img
@@ -111,9 +114,10 @@ export default function Modal({
                                   className="font-normal text-base text-gray-700 dark:text-gray-300 text-center "
                                   key={idx}
                                 >
-                                  <div className={`${ob.type.name} icon ml-7 m-4 w-1/2 h-auto`}>
+                                  <div
+                                    className={`${ob.type.name} icon ml-7 m-4 w-1/2 h-auto`}
+                                  >
                                     <img
-                                    
                                       src={
                                         images[ob.type.name + ".svg"].default
                                       }
@@ -128,8 +132,10 @@ export default function Modal({
                           </div>
                         </div>
                         <h1 className="text-center text-2xl m-2">Moves</h1>
-                          <div className="grid lg:grid-cols-3 p-2 bg-red-900 m-0
-                        dark:bg-gray-900 sm:grid-cols-2 rounded-lg ">
+                        <div
+                          className="grid lg:grid-cols-3 p-2 bg-red-900 m-0
+                        dark:bg-gray-900 sm:grid-cols-2 rounded-lg "
+                        >
                           {moves.map((m, idx) => {
                             return (
                               <li
