@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import useData from "./useData";
 import Modal from "./modal";
 
 export default function Search(props) {
   const [val, setVal] = useState("1");
   const [urlName, setUrlName] = useState();
+  const [loading,setLoading]=useState(true);
+  useEffect(()=>{
+    const timer=setTimeout(()=>{
+      setLoading(false);
+    },3000);
+    return ()=>clearTimeout(timer);
+  },[loading]);
   const [
     {
       abilities,
@@ -58,6 +65,7 @@ export default function Search(props) {
                 setUrlName(val);
                 if (val !== "") {
                   setShow(true);
+                  setLoading(true);
                 }
               }}
               className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center "
