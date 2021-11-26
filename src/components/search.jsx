@@ -10,6 +10,10 @@ export default function Search(props) {
     const timer=setTimeout(()=>{
       setLoading(false);
     },3000);
+    if(loading)
+    {
+       setShow(true);
+    }
     return ()=>clearTimeout(timer);
   },[loading]);
   const [
@@ -64,7 +68,7 @@ export default function Search(props) {
                 e.preventDefault();
                 setUrlName(val);
                 if (val !== "") {
-                  setShow(true);
+                 
                   setLoading(true);
                 }
               }}
