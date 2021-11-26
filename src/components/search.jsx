@@ -10,7 +10,7 @@ export default function Search(props) {
     const timer=setTimeout(()=>{
       setLoading(false);
     },3000);
-    if(loading)
+    if(!loading)
     {
        setShow(true);
     }
