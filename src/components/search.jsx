@@ -15,7 +15,7 @@ export default function Search(props) {
        setShow(true);
     }
     return ()=>clearTimeout(timer);
-  },[loading]);
+  },[loading,setShow]);
   const [
     {
       abilities,
