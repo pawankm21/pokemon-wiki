@@ -47,7 +47,6 @@ const useData = (url) => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [error, setError] = useState(undefined);
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     getData(url);
     if (name)
@@ -69,7 +68,7 @@ const useData = (url) => {
     forms: forms,
     name: name,
     error: error,
-    loading: loading,
+
   };
   const setRet = {
     setAbilities: setAbilities,
@@ -82,7 +81,6 @@ const useData = (url) => {
     setForms: setForms,
     setName: setName,
     setError: setError,
-    setLoading: setLoading,
   };
   return [ret, setRet];
 };
