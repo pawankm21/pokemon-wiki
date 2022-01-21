@@ -17,7 +17,7 @@ export default function Search(props) {
       name,
       error,
       show,
-      loading,
+      
     },
     { setError, setShow },
   ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
@@ -37,7 +37,7 @@ export default function Search(props) {
         moves={moves}
         error={error}
         setError={setError}
-        loading={loading}
+
         
       />
 
