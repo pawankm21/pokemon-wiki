@@ -5,7 +5,22 @@ import MyModal from "./mymodal";
 export default function Search(props) {
   const [val, setVal] = useState("1");
   const [urlName, setUrlName] = useState();
-  const [loading,setLoading]=useState(true);
+  const [loading, setLoading] = useState(true);
+   const [
+     {
+       abilities,
+       weight,
+       height,
+       types,
+       image,
+       moves,
+       forms,
+       name,
+       error,
+       show,
+     },
+     { setError, setShow },
+   ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
   useEffect(()=>{
     const timer=setTimeout(()=>{
       setLoading(false);
@@ -16,22 +31,7 @@ export default function Search(props) {
     }
     return ()=>clearTimeout(timer);
   },[loading,setShow]);
-  const [
-    {
-      abilities,
-      weight,
-      height,
-      types,
-      image,
-      moves,
-      forms,
-      name,
-      error,
-      show,
-      loading,
-    },
-    { setError, setShow },
-  ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
+ 
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function Search(props) {
         moves={moves}
         error={error}
         setError={setError}
-        loading={loading}
+
         
       />
 
