@@ -1,37 +1,25 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import useData from "./useData";
 import MyModal from "./mymodal";
 
 export default function Search(props) {
   const [val, setVal] = useState("1");
   const [urlName, setUrlName] = useState();
-  const [loading, setLoading] = useState(true);
-   const [
-     {
-       abilities,
-       weight,
-       height,
-       types,
-       image,
-       moves,
-       forms,
-       name,
-       error,
-       show,
-     },
-     { setError, setShow },
-   ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
-  useEffect(()=>{
-    const timer=setTimeout(()=>{
-      setLoading(false);
-    },3000);
-    if(!loading)
+  const [
     {
-       setShow(true);
-    }
-    return ()=>clearTimeout(timer);
-  },[loading,setShow]);
- 
+      abilities,
+      weight,
+      height,
+      types,
+      image,
+      moves,
+      forms,
+      name,
+      error,
+      show,
+    },
+    { setError, setShow },
+  ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
 
   return (
     <>
@@ -48,7 +36,6 @@ export default function Search(props) {
         moves={moves}
         error={error}
         setError={setError}
-
         
       />
 
@@ -70,8 +57,7 @@ export default function Search(props) {
                 e.preventDefault();
                 setUrlName(val);
                 if (val !== "") {
-                 
-                  setLoading(true);
+                  setShow(true);
                 }
               }}
               className="bg-black text-white rounded-full p-2  transition duration-500 ease-in-out hover:bg-red-600 focus:outline-none w-12 h-12 flex items-center justify-center "
