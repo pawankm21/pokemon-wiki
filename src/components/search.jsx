@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import useData from "./useData";
-import Modal from "./modal";
+import MyModal from "./mymodal";
 
 export default function Search(props) {
   const [val, setVal] = useState("1");
@@ -28,13 +28,14 @@ export default function Search(props) {
       name,
       error,
       show,
+      loading,
     },
     { setError, setShow },
   ] = useData(`https://pokeapi.co/api/v2/pokemon/${urlName}/`);
 
   return (
     <>
-      <Modal
+      <MyModal
         showModal={show}
         setShowModal={setShow}
         weight={weight}
@@ -47,6 +48,7 @@ export default function Search(props) {
         moves={moves}
         error={error}
         setError={setError}
+        loading={loading}
         
       />
 

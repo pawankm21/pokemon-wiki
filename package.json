@@ -1,7 +1,6 @@
 {
   "name": "pokemon-wiki",
   "version": "0.1.0",
-  "homepage": "https://pawankm21.github.io/pokemon-wiki",
   "private": false,
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -12,12 +11,11 @@
     "craco": "0.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loading": "^2.0.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
