@@ -9,7 +9,6 @@ const useData = (url) => {
           return res.json();
         })
         .then((jsonData) => {
-          setError(undefined);
           setAbilities(jsonData.abilities);
           setHeight(jsonData.height);
           setImage(
@@ -24,9 +23,9 @@ const useData = (url) => {
           setForms(jsonData.forms);
           setMoves(jsonData.moves);
           setName(jsonData.name);
+          setLoading(false);
         })
         .catch((error) => {
-          setError(error.message);
           setAbilities([]);
           setHeight(0);
           setImage("");
@@ -48,9 +47,17 @@ const useData = (url) => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [error, setError] = useState(undefined);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     getData(url);
-  }, [url]);
+    if (name)
+    {
+      setError(undefined);
+    }
+    else {
+      setError("Could not find the Pokemon 😟");
+    }
+  }, [url,name]);
   const ret = {
     abilities: abilities,
     weight: weight,
@@ -62,6 +69,7 @@ const useData = (url) => {
     forms: forms,
     name: name,
     error: error,
+    loading: loading,
   };
   const setRet = {
     setAbilities: setAbilities,
@@ -74,6 +82,7 @@ const useData = (url) => {
     setForms: setForms,
     setName: setName,
     setError: setError,
+    setLoading: setLoading,
   };
   return [ret, setRet];
 };
