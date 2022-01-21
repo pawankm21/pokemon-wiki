@@ -23,7 +23,7 @@ const useData = (url) => {
           setForms(jsonData.forms);
           setMoves(jsonData.moves);
           setName(jsonData.name);
-          setLoading(false);
+
         })
         .catch((error) => {
           setAbilities([]);
