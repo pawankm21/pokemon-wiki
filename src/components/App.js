@@ -129,10 +129,10 @@ function App() {
         <h1 className=" font-xl mt-10 transition duration-700 ease-in-out transform hover:scale-110 text-white">
           Crafted with passion <span className=" animate-ping  ">{"❤️"}</span>
           <a
-            href="https://github.com/pawankm21"
+            href="https://github.com/ParasRaina01"
             className="text-red-100 font-bold dark:text-red-300"
           >
-            @pawankm21
+            @parasRaina
           </a>
         </h1>
       </footer>
